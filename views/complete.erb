@@ -57,8 +57,9 @@
                 <td><%= params['tel'] %></td>
             </tr>
             <tr>
-                <th>内容内容</th>
-                <td><%= params['content'] %></td>
+            <% content = params['content'].gsub(/\r\n|\r|\n/, "<br>") %>
+                <th>内容</th>
+                <td><%= content %></td>
             </tr>
         </table>    
         
